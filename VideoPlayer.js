@@ -509,10 +509,13 @@ export default class VideoPlayer extends Component {
             this.state.duration
         );
 
+				const hours = Math.floor( time / 3600 ).toFixed( 0 );
+				time = time - hours * 3600;
+				const formattedHours = _.padStart( hours, 2, 0 );
         const formattedMinutes = _.padStart( Math.floor( time / 60 ).toFixed( 0 ), 2, 0 );
         const formattedSeconds = _.padStart( Math.floor( time % 60 ).toFixed( 0 ), 2 , 0 );
 
-        return `${ symbol }${ formattedMinutes }:${ formattedSeconds }`;
+        return `${ symbol }${ formattedHours }${ formattedMinutes }:${ formattedSeconds }`;
     }
 
     /**
