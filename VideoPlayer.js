@@ -515,7 +515,7 @@ export default class VideoPlayer extends Component {
         const formattedMinutes = _.padStart( Math.floor( time / 60 ).toFixed( 0 ), 2, 0 );
         const formattedSeconds = _.padStart( Math.floor( time % 60 ).toFixed( 0 ), 2 , 0 );
 
-        return `${ symbol }${ formattedHours }${ formattedMinutes }:${ formattedSeconds }`;
+        return `${ symbol }${ formattedHours }:${ formattedMinutes }:${ formattedSeconds }`;
     }
 
     /**
@@ -1272,7 +1272,7 @@ const styles = {
             textAlign: 'center',
         },
         timer: {
-            width: 80,
+            width: 120,
         },
         timerText: {
             backgroundColor: 'transparent',
